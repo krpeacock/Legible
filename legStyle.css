@@ -44,6 +44,16 @@
 	opacity: .6;
 	padding: 1px;
 }
+#optionsMenu{
+	height: 400px;
+	width:300px;
+	position:relative;
+	left:-275px;
+	background-color: white;
+	border:solid #e7e7e7 4px;
+	border-radius: 12px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
 #innerArticle{
 	background-color: #EEE;
 	margin:15px;

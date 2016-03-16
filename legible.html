@@ -5,25 +5,44 @@
 	<meta charset="UTF-8">
 	<title>Reader</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="https://use.typekit.net/mkn7sqd.js"></script>
-	<script>
-		try {
-			Typekit.load({
-				async: true
-			});
-		} catch (e) {}
+	<link rel="stylesheet" href="legStyle.css">
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" href="jqueryui.css">
 
-	</script>
-	<link rel="stylesheet" href="style.css">
+
 
 </head>
 
 <body>
-	<div class="left-margin"><i class="fa fa-times"></i></div>
-	<div class="right-margin"><i class="fa fa-cog"></i></div>
-	<div id="reader">
-		<article></article>
+	<div id="legWindow" data-role="page">
+		<div class="left-margin"><img class="legIcon" src="closeIcon.png"></div>
+		<div class="right-margin" data-role="listview">
+			<a href="#dialog" data rel="dialog"><img class="legIcon" src="optionsIcon.png"></a>
+		</div>
+		<div id="reader">
+			<article id="article" data-role="content">
+				<h1 class="legHeader">Header goes here</h1>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos vero fuga culpa consequuntur possimus sit ut molestias</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto illo blanditiis non explicabo libero.</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nemo et quasi cupiditate molestiae dignissimos, atque tenetur eius! Rerum porro ipsum nulla! Et est perspiciatis molestiae ea sint temporibus non.</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam non rem quasi autem unde sequi dicta, cumque adipisci, amet ab eligendi ducimus!</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dignissimos illum dicta culpa sunt voluptatibus natus. Veniam alias modi magnam quo itaque! Nostrum hic eos dolores harum, dicta iusto recusandae.</p>
+				<div id="mobile">
+				</div>
+			</article>
+		</div>
 	</div>
+	<div data-role="dialog" id="dialog">
+		<div data-role="header">
+			<h1>Legible Options</h1>
+		</div>
+		<div data-role="content">
+			<p>I finally did it!</p>
+		</div>
+	</div>
+	<script src="jqueryui.js"></script>
 </body>
 
 </html>
