@@ -6,17 +6,24 @@ chrome.runtime.onMessage.addListener(
 			//Include stylesheet
 			var legStyle = chrome.extension.getURL("legStyle.css");
 			$('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
+			
+			var exit = chrome.extension.getURL("closeIcon.png");
+			var options = chrome.extension.getURL("optionsIcon.png");
 
 
 			//Create Legible Window
 			var legWindow = $("html").append(`<div id="legWindow">
-				<div class = "left-margin"></div>
-				<div class = "right-margin"></div>
+				<div class = "left-margin"><img class = "legIcon" src = "${exit}"></div>
+				<div class = "right-margin"><img class = "legIcon" src = "${options}"></div>
 			<div id ="reader"><article id = "innerArticle"></article></div></div>`);
 			var reader = $("#reader");
 			var inner = $("#innerArticle");
 
 			legWindow;
+			
+			//Set Icons
+//			$(".left-margin").css(`'background-image', 'url(${exit})'`);
+//			$(".right-margin").css(`'background-image', 'url(${options})'`);
 
 			var articles = $("article");
 			var arrLength = [];
