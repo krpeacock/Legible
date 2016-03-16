@@ -60,6 +60,12 @@ chrome.runtime.onMessage.addListener(
 				$("body").unwrap();
 				$("#legWindow").remove();
 			});
+			$(document).keyup(function (e) {
+				if (e.keyCode == 27) {
+					$("body").unwrap();
+					$("#legWindow").remove();
+				}
+			});
 		}
 
 
