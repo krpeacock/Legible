@@ -1,12 +1,12 @@
 chrome.runtime.onMessage.addListener(
 	function (request, sender, sendResponse) {
 		if (request.message === "legible_activate") {
-			$("body").wrap("<div class='bodyHide'></div>");
+			$("body").wrap("<div id = 'legContain' class='bodyHide'></div>");
 
 			//Include stylesheet
 			var legStyle = chrome.extension.getURL("legStyle.css");
-			$('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
-			
+			var stylesheet = $('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
+
 			var exit = chrome.extension.getURL("closeIcon.png");
 			var options = chrome.extension.getURL("optionsIcon.png");
 
@@ -20,10 +20,6 @@ chrome.runtime.onMessage.addListener(
 			var inner = $("#innerArticle");
 
 			legWindow;
-			
-			//Set Icons
-//			$(".left-margin").css(`'background-image', 'url(${exit})'`);
-//			$(".right-margin").css(`'background-image', 'url(${options})'`);
 
 			var articles = $("article");
 			var arrLength = [];
@@ -43,8 +39,10 @@ chrome.runtime.onMessage.addListener(
 			console.log(articleArray);
 
 			//Adds H1, P, & IMG tags to legWindow Div
+
 			var title = $("title")[0].innerHTML;
 			inner.prepend(`<h1 class = "legHeader">${title}</h1>`);
+
 			for (i = 0; i < articleArray.length; i++) {
 				if (articleArray[i].nodeName === "P") {
 					var temp = articleArray[i].innerHTML;
@@ -56,13 +54,12 @@ chrome.runtime.onMessage.addListener(
 						inner.append(`<img src="${temp}" class = "legImg">`)
 					}
 				}
-
-				//Exit Function
-				$('.left-margin').click(function () {
-					$("body").unwrap();
-					$("#legWindow").css("display", "none");
-				})
 			}
+			//Exit Function
+			$('.left-margin').click(function () {
+				$("body").unwrap();
+				$("#legWindow").remove();
+			});
 		}
 
 
