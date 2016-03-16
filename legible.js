@@ -14,7 +14,11 @@ chrome.runtime.onMessage.addListener(
 			//Create Legible Window
 			var legWindow = $("html").append(`<div id="legWindow">
 				<div class = "left-margin"><img class = "legIcon" src = "${exit}"></div>
-				<div class = "right-margin"><img class = "legIcon" src = "${options}"></div>
+				<div class = "right-margin"><img class = "legIcon" src = "${options}"><a href="#popupBasic" data-rel="popup">Open Popup</a>
+ 
+<div data-role="popup" id="popupBasic">
+  <p>This is a completely basic popup, no options set.</p>
+</div></div>
 			<div id ="reader"><article id = "innerArticle"></article></div></div>`);
 			var reader = $("#reader");
 			var inner = $("#innerArticle");
