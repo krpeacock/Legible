@@ -1,0 +1,96 @@
+#legWindow {
+	width:100%;
+	min-height: 100vh;
+	align-content: center;
+	font-family: adobe-garamond;
+	background-color: #E7E7E7;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 20;
+}
+#reader {
+	position:relative;
+	width: 82vw;
+	left: 50%;
+	margin-left: -41vw;
+	background-color: #EEE;
+	top:-24px;
+	justify-content: flex-end;
+	
+}
+.bodyHide {
+	visibility:hidden;
+	height:0px;
+	display:none;
+	position:relative;
+}
+.left-margin, .right-margin {
+	position: fixed;
+	margin: 0;
+	height: 40px;
+	width: 7.5vw;
+	z-index: 2;
+	text-align: center;
+}
+.left-margin {
+	left:0;
+	background-image: url("closeIcon.png");
+}
+.right-margin {
+	right:0;
+	background-image: url("optionsIcon.png");
+}
+
+#innerArticle{
+	background-color: #EEE;
+	margin:15px;
+}
+.legImg {
+	max-width: 60vw;
+	box-shadow: 5px 5px 5px 2.5px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	border: solid #8B8B8B 1px;
+	opacity: .6;
+}
+.legDiv {
+	align-content: center;
+	align-self: center;
+	text-align: center;
+}
+.legHeader {
+	text-align: center;
+	font-family: adobe-bodoni;
+	font-size: 1.8em;
+	text-decoration: underline;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 1.4em;
+	color: darkslategray;
+}
+.legText {
+	text-indent: 20px;
+	line-height: 1.5;
+	text-align: left;
+}
+.legLink {
+	text-decoration: none;
+	color: black;
+}
+.legFooter {
+	border: solid gray 2px;
+	margin-top: 70px;
+	font-size: .8em;
+}
+.legSpan {
+	margin: 0;
+	color: lightslategray;
+	justify-content: space-between;
+	font-size: 1em;
+}
+.visually-hidden{
+	display: none;
+}
+.byline-dateline {
+	text-align: center;
+}
