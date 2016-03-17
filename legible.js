@@ -5,7 +5,12 @@ chrome.runtime.onMessage.addListener(
 
 			//Include stylesheet
 			var legStyle = chrome.extension.getURL("legStyle.css");
-			var stylesheet = $('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
+			var optionStyle = chrome.extension.getURL("jqueryui.css");
+			var optionScript = chrome.extension.getURL("jqueryui.js");
+			var jqScript = chrome.extension.getURL("jqueryui.js");
+
+			var stylesheet1 = $('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
+			var stylesheet2 = $('<link rel="stylesheet" type="text/css" href="' + optionStyle + '" >').appendTo("head");
 
 			var exit = chrome.extension.getURL("closeIcon.png");
 			var options = chrome.extension.getURL("optionsIcon.png");
@@ -68,7 +73,7 @@ chrome.runtime.onMessage.addListener(
 			});
 		}
 
-var dialog = $("html").append(`<div data-role="page" id="dialog" data-add-back-btn="true">
+		var dialog = $("html").append(`<div data-role="page" id="dialog" data-add-back-btn="true">
 		<div data-role="header">
 			<h1>Legible Options</h1>
 		</div>
@@ -112,5 +117,7 @@ var dialog = $("html").append(`<div data-role="page" id="dialog" data-add-back-b
 			</form>
 		</div>
 	</div>`);
+		var scriptsource1 = $('<script src="' + optionScript + '" >').appendTo("#dialog");
+		var scriptsource2 = $('<script src="' + jqScript + '" >').appendTo("head");
 
 	});
