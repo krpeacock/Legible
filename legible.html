@@ -19,7 +19,7 @@
 	<div id="legWindow" data-role="page">
 		<div class="left-margin"><img class="legIcon" src="closeIcon.png"></div>
 		<div class="right-margin" data-role="listview">
-			<a href="#dialog" data rel="dialog"><img class="legIcon" src="optionsIcon.png"></a>
+			<a href="#dialog" data-rel="dialog"><img class="legIcon" src="optionsIcon.png"></a>
 		</div>
 		<div id="reader">
 			<article id="article" data-role="content">
@@ -34,12 +34,48 @@
 			</article>
 		</div>
 	</div>
-	<div data-role="dialog" id="dialog">
+	<div data-role="page" id="dialog" data-add-back-btn="true">
 		<div data-role="header">
 			<h1>Legible Options</h1>
 		</div>
 		<div data-role="content">
-			<p>I finally did it!</p>
+			<h2>Font Family</h2>
+			<form data-role="controlgroup">
+				<div class="ui-field-contain">
+					<select name="select-native-1" id="select-native-1">
+
+						<option value="1">Garamond</option>
+
+						<option value="2">Times New Roman</option>
+
+						<option value="3">Arial</option>
+
+						<option value="4">Wingdings</option>
+					</select>
+				</div>
+			</form>
+			<hr>
+			<h2>Font Size</h2>
+			<form data-role="controlgroup">
+				<label for="fontSmall">
+					<input type="radio">Small
+				</label>
+				<label for="">
+					<input type="radio">Medium
+				</label>
+				<label for="">
+					<input type="radio">Large
+				</label>
+			</form>
+			<hr>
+			<h2>Images</h2>
+			<form action="">
+				<label for="flip-1">Try to collect images?</label>
+				<select name="flip-1" id="flip-1" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</form>
 		</div>
 	</div>
 	<script src="jqueryui.js"></script>

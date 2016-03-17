@@ -14,7 +14,8 @@ chrome.runtime.onMessage.addListener(
 			//Create Legible Window
 			var legWindow = $("html").append(`<div id="legWindow">
 				<div class = "left-margin"><img class = "legIcon" src = "${exit}"></div>
-				<div class = "right-margin"><img class = "legIcon" src = "${options}"></div>
+						<div class="right-margin" data-role="listview">
+			<a href="#dialog" data-rel="dialog"><img class = "legIcon" src = "${options}"></a></div>
 			<div id ="reader"><article id = "innerArticle"></article></div></div>`);
 			var reader = $("#reader");
 			var inner = $("#innerArticle");
@@ -67,6 +68,49 @@ chrome.runtime.onMessage.addListener(
 			});
 		}
 
+var dialog = $("html").append(`<div data-role="page" id="dialog" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Legible Options</h1>
+		</div>
+		<div data-role="content">
+			<h2>Font Family</h2>
+			<form data-role="controlgroup">
+				<div class="ui-field-contain">
+					<select name="select-native-1" id="select-native-1">
 
+						<option value="1">Garamond</option>
+
+						<option value="2">Times New Roman</option>
+
+						<option value="3">Arial</option>
+
+						<option value="4">Wingdings</option>
+					</select>
+				</div>
+			</form>
+			<hr>
+			<h2>Font Size</h2>
+			<form data-role="controlgroup">
+				<label for="fontSmall">
+					<input type="radio">Small
+				</label>
+				<label for="">
+					<input type="radio">Medium
+				</label>
+				<label for="">
+					<input type="radio">Large
+				</label>
+			</form>
+			<hr>
+			<h2>Images</h2>
+			<form action="">
+				<label for="flip-1">Try to collect images?</label>
+				<select name="flip-1" id="flip-1" data-role="slider">
+					<option value="off">Off</option>
+					<option value="on">On</option>
+				</select>
+			</form>
+		</div>
+	</div>`);
 
 	});

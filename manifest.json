@@ -10,13 +10,19 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery.js", "legible.js"]
+      "js": ["jquery.js", "legible.js", "jqueryui.js"],
+	  "css": [
+		  "legStyle.css",
+		  "jqueryui.js"
+	  ]
     }
   ],
   "web_accessible_resources": [
       "legStyle.css",
 	  "closeIcon.png",
-	  "optionsIcon.png"
+	  "optionsIcon.png",
+	  "jquery.js",
+	  "jqueryui.css"
   ],
   "browser_action": {
     "default_icon": "Legible.png"
