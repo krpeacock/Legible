@@ -12,22 +12,22 @@ chrome.runtime.onMessage.addListener(
 			var jqScript = document.createElement('script');
 			jqScript.src = chrome.extension.getURL("jquery.js");
 			jqScript.onload = function () {
-					this.parentNode.removeChild(this);
-				}
-				
+				this.parentNode.removeChild(this);
+			}
+
 
 			var optionScript = document.createElement('script');
 			optionScript.src = chrome.extension.getURL("jqueryui.js");
 			optionScript.onload = function () {
-					this.parentNode.removeChild(this);
-				}
+				this.parentNode.removeChild(this);
+			}
 
 			var stylesheet1 = $('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
-			var stylesheet2 = 
+			var stylesheet2 =
 				document.createElement('link');
 			$('<link rel="stylesheet" type="text/css" href="' + optionStyle + '" >').appendTo("head");
-			
-			
+
+
 
 			var exit = chrome.extension.getURL("closeIcon.png");
 			var options = chrome.extension.getURL("optionsIcon.png");
@@ -84,8 +84,10 @@ chrome.runtime.onMessage.addListener(
 			});
 			$(document).keyup(function (e) {
 				if (e.keyCode == 27) {
-					$("body").unwrap();
-					$("#legWindow").remove();
+					if ($("#legWindow")) {
+						$("body").unwrap();
+						$("#legWindow").remove();
+					}
 				}
 			});
 		}

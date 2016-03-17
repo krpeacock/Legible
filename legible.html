@@ -22,27 +22,32 @@
 			<a href="#dialog" data-rel="dialog"><img class="legIcon" src="optionsIcon.png"></a>
 		</div>
 		<div id="reader">
-			<article id="article" data-role="content">
+			<article id="article" data-role="content" class = "adjust">
 				<h1 class="legHeader">Header goes here</h1>
-				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos vero fuga culpa consequuntur possimus sit ut molestias</p>
-				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto illo blanditiis non explicabo libero.</p>
+				<img src="http://mii-gamer.com/wp-content/uploads/2014/07/zelda-ii-the-adventure-of-link-u-error.png" class = "legImg">
+
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit possimus ipsum laborum hic a voluptate, eaque officiis consequatur, expedita repudiandae explicabo, et tenetur ratione! Distinctio nostrum ea, nihil enim eveniet!</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti libero quod sint, ipsam magni temporibus voluptatem eum culpa, dolorum molestias ex similique. Recusandae doloribus facilis illo corporis tempore, molestiae. Impedit. </p>
+				<img src="http://mii-gamer.com/wp-content/uploads/2014/07/zelda-ii-the-adventure-of-link-u-error.png" class = "legImg">
+
 				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nemo et quasi cupiditate molestiae dignissimos, atque tenetur eius! Rerum porro ipsum nulla! Et est perspiciatis molestiae ea sint temporibus non.</p>
-				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam non rem quasi autem unde sequi dicta, cumque adipisci, amet ab eligendi ducimus!</p>
-				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet dignissimos illum dicta culpa sunt voluptatibus natus. Veniam alias modi magnam quo itaque! Nostrum hic eos dolores harum, dicta iusto recusandae.</p>
+				<img src="http://mii-gamer.com/wp-content/uploads/2014/07/zelda-ii-the-adventure-of-link-u-error.png" class = "legImg">
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, numquam? Eaque aliquid distinctio veniam consequatur illo, est, assumenda id, aut voluptatem iure alias temporibus rerum laborum harum delectus repudiandae beatae?</p>
+				<p class="legText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem alias cumque ducimus molestiae non voluptatum, fugiat sunt corporis laborum sequi, quasi voluptas distinctio quis praesentium porro voluptate soluta sed mollitia!</p>
 				<div id="mobile">
 				</div>
 			</article>
 		</div>
 	</div>
-	<div data-role="page" id="dialog" data-add-back-btn="true">
+	<div data-role="page" id="dialog" data-add-back-btn="true" class="adjust">
 		<div data-role="header">
-			<h1>Legible Options</h1>
+			<h1 class = "adjust">Legible Options</h1>
 		</div>
-		<div data-role="content">
-			<h2>Font Family</h2>
+		<div data-role="content" class = "legText">
+			<h2 class = "adjust">Font Family</h2>
 			<form data-role="controlgroup">
 				<div class="ui-field-contain">
-					<select name="select-native-1" id="select-native-1">
+					<select name="select-native-1" id="select-native-1" class = "adjust">
 
 						<option value="1">Garamond</option>
 
@@ -50,26 +55,26 @@
 
 						<option value="3">Arial</option>
 
-						<option value="4">Wingdings</option>
+						<option value="4">Comic Sans</option>
 					</select>
 				</div>
 			</form>
 			<hr>
-			<h2>Font Size</h2>
-			<form data-role="controlgroup">
+			<h2 class = "adjust">Font Size</h2>
+			<form data-role="controlgroup" id = "fontSize">
 				<label for="fontSmall">
-					<input type="radio">Small
+					<input type="radio" id = "fontSmall" value="small"  name ="font"><h2 class = "adjust">Small</h2>
 				</label>
-				<label for="">
-					<input type="radio">Medium
+				<label for="fontMedium">
+					<input type="radio" id = "fontMedium" value="medium" name ="font" checked="true"><h2 class = "adjust">Medium</h2>
 				</label>
-				<label for="">
-					<input type="radio">Large
+				<label for="fontLarge">
+					<input type="radio" id = "fontLarge" value="large" name ="font"><h2 class = "adjust">Large</h2>
 				</label>
 			</form>
 			<hr>
 			<h2>Images</h2>
-			<form action="">
+			<form action="imgToggle()">
 				<label for="flip-1">Try to collect images?</label>
 				<select name="flip-1" id="flip-1" data-role="slider">
 					<option value="off">Off</option>

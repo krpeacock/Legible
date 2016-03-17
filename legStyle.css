@@ -64,11 +64,22 @@
 	padding: 20px;
 	border: solid #8B8B8B 1px;
 	opacity: .6;
+	position: relative;
+	
 }
 .legDiv {
 	align-content: center;
 	align-self: center;
 	text-align: center;
+}
+.legText {
+	text-indent: 20px;
+	line-height: 1.5;
+	text-align: left;
+	font-size: 1em;
+}
+.adjust {
+	font-size: 1em;
 }
 .legHeader {
 	text-align: center;
@@ -80,11 +91,6 @@
 	line-height: 1.4em;
 	color: darkslategray;
 	padding-top: 20px;
-}
-.legText {
-	text-indent: 20px;
-	line-height: 1.5;
-	text-align: left;
 }
 .legLink {
 	text-decoration: none;
