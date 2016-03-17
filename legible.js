@@ -6,11 +6,28 @@ chrome.runtime.onMessage.addListener(
 			//Include stylesheet
 			var legStyle = chrome.extension.getURL("legStyle.css");
 			var optionStyle = chrome.extension.getURL("jqueryui.css");
-			var optionScript = chrome.extension.getURL("jqueryui.js");
-			var jqScript = chrome.extension.getURL("jqueryui.js");
+
+
+
+			var jqScript = document.createElement('script');
+			jqScript.src = chrome.extension.getURL("jquery.js");
+			jqScript.onload = function () {
+					this.parentNode.removeChild(this);
+				}
+				
+
+			var optionScript = document.createElement('script');
+			optionScript.src = chrome.extension.getURL("jqueryui.js");
+			optionScript.onload = function () {
+					this.parentNode.removeChild(this);
+				}
 
 			var stylesheet1 = $('<link rel="stylesheet" type="text/css" href="' + legStyle + '" >').appendTo("head");
-			var stylesheet2 = $('<link rel="stylesheet" type="text/css" href="' + optionStyle + '" >').appendTo("head");
+			var stylesheet2 = 
+				document.createElement('link');
+			$('<link rel="stylesheet" type="text/css" href="' + optionStyle + '" >').appendTo("head");
+			
+			
 
 			var exit = chrome.extension.getURL("closeIcon.png");
 			var options = chrome.extension.getURL("optionsIcon.png");
@@ -117,7 +134,5 @@ chrome.runtime.onMessage.addListener(
 			</form>
 		</div>
 	</div>`);
-		var scriptsource1 = $('<script src="' + optionScript + '" >').appendTo("#dialog");
-		var scriptsource2 = $('<script src="' + jqScript + '" >').appendTo("head");
 
 	});
