@@ -17,7 +17,6 @@
 	margin-left: -41vw;
 	background-color: #EEE;
 	top: -24px;
-	justify-content: flex-end;
 }
 
 .bodyHide {
@@ -66,9 +65,6 @@
 	position: relative;
 	background-color: #EEE;
 	margin: 15px;
-	text-align: center;
-	display: flex;
-	align-items: center;
 }
 
 .legImg {

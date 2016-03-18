@@ -35,6 +35,7 @@ $(document).ready(function () {
 		$('input:radio[name=font]:nth(0)').attr('checked', true);
 		$(".adjust").css("font-size", small);
 		$(".legHeader").css("font-size", "2em");
+		$(".legImg").css("max-width", "180px");
 		//$('input:radio[name=font]')[0].checked = true;
 
 	});
@@ -44,6 +45,7 @@ $(document).ready(function () {
 		$('input:radio[name=font]:nth(1)').attr('checked', true);
 		$(".adjust").css("font-size", medium);
 		$(".legHeader").css("font-size", "2em");
+		$(".legImg").css("max-width", "250px");
 		//$('input:radio[name=font]')[1].checked = true;
 
 	});
@@ -53,6 +55,7 @@ $(document).ready(function () {
 		$('input:radio[name=font]:nth(2)').attr('checked', true);
 		$(".adjust").css("font-size", large);
 		$(".legHeader").css("font-size", "2em");
+		$(".legImg").css("max-width", "400px");
 		//$('input:radio[name=font]')[2].checked = true;
 
 	});
